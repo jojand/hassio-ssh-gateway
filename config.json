@@ -1,0 +1,31 @@
+{
+  "name": "SSH gateway",
+  "version": "0.1",
+  "slug": "ssh_gateway",
+  "description": "Provides remote SSH port tunneling. It can be used e.g. to make Homeassistant accessible from behind the NAT.",
+  "arch": ["armhf", "armv7"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+    "privateKey": "privateKey",
+    "tunnels": [
+      {
+        "name": "tunnel-1",
+        "forwardString": "<remote-source-port>:<local-destination-host (e.g. homeassistant)>:<local-destination-port>",
+        "remoteHost": "<remote-ssh-user>@<remote-ssh-host>",
+        "remotePort": "<remote-ssh-port>"
+      }
+    ]
+  },
+  "schema": {
+    "privateKey": "str",
+    "tunnels": [
+      {
+        "name": "str",
+        "forwardString": "str",
+        "remoteHost": "str",
+        "remotePort": "str"
+      }
+    ]
+  }
+}
