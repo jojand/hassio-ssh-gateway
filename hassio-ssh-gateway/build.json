@@ -1,6 +1,7 @@
 {
   "build_from": {
     "armhf": "arm32v7/alpine:3.10.2",
-    "armv7": "arm32v7/alpine:3.10.2"
+    "armv7": "arm32v7/alpine:3.10.2",
+    "aarch64": "arm64v8/alpine:3.10.2"
   }
 }
